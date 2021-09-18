@@ -5,7 +5,10 @@ export const up = (knex: Knex): Promise<void> =>
   knex.schema.createTable(Bag.tableName, (table: Knex.TableBuilder) => {
     table.increments();
     table.timestamps();
+    table.string('title');
     table.integer('volume');
+    table.integer('payloadVolume');
+    table.integer('availableVolume');
   });
 
 export const down = (knex: Knex): Promise<void> =>
