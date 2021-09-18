@@ -1,6 +1,8 @@
 import { Id, RelationMappings } from 'objection';
 import { Cuboid } from './Cuboid';
 import Base from './Base';
+import { Capacity } from '../errors/Capacity';
+import cuboid from '../factories/cuboid';
 
 export class Bag extends Base {
   id!: Id;
